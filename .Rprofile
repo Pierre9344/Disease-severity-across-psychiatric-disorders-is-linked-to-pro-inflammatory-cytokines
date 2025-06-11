@@ -1,0 +1,20 @@
+library(targets)
+library(dplyr)
+library(magrittr)
+
+options(tidyverse.quiet = TRUE)
+options(connectionsObserver = NULL)
+
+conflicted::conflicts_prefer(dplyr::filter)
+conflicted::conflicts_prefer(dplyr::select)
+conflicted::conflicts_prefer(dplyr::summarise)
+conflicted::conflicts_prefer(dplyr::ungroup)
+conflicted::conflicts_prefer(dplyr::setdiff)
+conflicted::conflicts_prefer(dplyr::first)
+conflicted::conflicts_prefer(dplyr::rename)
+
+conflicted::conflicts_prefer(base::merge)
+conflicted::conflicts_prefer(base::unname)
+conflicted::conflicts_prefer(base::droplevels)
+conflicted::conflicts_prefer(base::intersect)
+conflicted::conflicts_prefer(base::union)

@@ -47,3 +47,31 @@ po/*~
 
 # RStudio Connect folder
 rsconnect/
+
+/.quarto/
+
+
+# data used in the project
+data/*
+!data/.gitkeep
+
+# Rendered quarto site
+_site/*
+
+# logs files from crew
+logs/*
+
+.quarto/*
+.Rproj.user/*
+
+# rendered figures
+FIG/*.pdf
+FIG/*.png
+FIG/*.jpeg
+FIG/*.jpg
+
+# R may create empty img files in the root folder sometimes. We blacklist them from the version control
+Rplot*.pdf
+Rplot*.png
+Rplot*.jpeg
+Rplot*.jpg
