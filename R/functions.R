@@ -23,26 +23,9 @@ GetAndFormatClinicalData <- function(NonImputedFile, ImputedFile) {
       }
     }
   }
-  # Correct the age that were not correctly recorded
-  # The loop next was run outside the pipeline to detect the ages that were not recorded correctly
-
-  # for (i in unique(pat_imp_proposal$v1_id)) {
-  #   v1 <- pat_imp_proposal %>% filter(v1_id == i, visit == 1)
-  #   v2 <- pat_imp_proposal %>% filter(v1_id == i, visit == 2)
-  #   v3 <- pat_imp_proposal %>% filter(v1_id == i, visit == 3)
-  #   v4 <- pat_imp_proposal %>% filter(v1_id == i, visit == 4)
-  #   if (v1$age > v2$age) {
-  #     print(i)
-  #   } else if (v2$age > v3$age) {
-  #     print(i)
-  #   } else if (v3$age > v4$age) {
-  #     print(i)
-  #   }
-  # }
 
   # The loop next was used to correct the age
   # informations was computed by the IPPG using the visit date and birthday dates of the participants
-
   for (i in 1:nrow(pat_imp_proposal)) {
     if (pat_imp_proposal$v1_id[i] == "digt726" && pat_imp_proposal$visit[i] == 3) {
       pat_imp_proposal$age[i] <- 77
